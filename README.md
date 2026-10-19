@@ -1,46 +1,32 @@
-# Astro Starter Kit: Basics
+# Rethink Redaction
 
-```sh
-npm create astro@latest -- --template basics
-```
+A static, document-inspired environmental proposal built with Astro 7.4.0 and self-hosted Atkinson Hyperlegible. Canonical site: https://rethinkredaction.org.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Local development
 
-## 🚀 Project Structure
+Use Node 24.18.0 (the version in .nvmrc), or a compatible release satisfying Astro's Node >=22.22.0 requirement.
 
-Inside of your Astro project, you'll see the following folders and files:
+- `npm ci`
+- `npm run dev`
+- `npm run check`
+- `npm run build`
+- `npm run verify:build`
+- `npm run preview`
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+The production output is `dist/`. No adapter, database, account, server runtime, environment secret, or external font request is required.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Content and identity
 
-## 🧞 Commands
+The existing logo, social image, and favicon are retained. Original assets remain in `src/assets/`; exact copies of the logo and social image are served from `public/brand/`. The font license is in `public/licenses/`.
 
-All commands are run from the root of the project, from a terminal:
+The fictional comparison follows the original dog/cat/sandwich motif. Withheld content does not exist in the source. The demonstration is not a redaction tool and never accepts documents.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+IRES is a proposed framework, not a certified or adopted standard. Legal claims must remain jurisdiction-specific. No quantified material, cost, emissions, staffing, maintenance, or backlog savings have been measured by this project.
 
-## 👀 Want to learn more?
+## Review and release
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+See `docs/review.md` for the audit, migration sequence, checks, and remaining review items. Do not push to an auto-deploy branch, publish, or send outreach without the owner's review.
+
+The static `public/_headers` file supplies a restrictive policy for hosting that supports this convention, including Cloudflare Pages. Astro's ordinary local preview does not apply these HTTP headers. Confirm the actual host's handling, Node version, build command, route redirects, and 404 behavior before releasing.
+
+No deployment command or hosting-account credentials are included.

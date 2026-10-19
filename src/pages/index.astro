@@ -1,62 +1,27 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Comparison from "../components/Comparison.astro";
 ---
-
-<BaseLayout
-  title="Same law. Less work."
-  description="A simple proposal: stop using solid black boxes when the law doesn’t require it. Improve readability, reduce labor, and preserve public trust."
->
-  <section class="section">
-    <p class="kicker">Phase 0 launch</p>
-    <h1 class="h1">Same law. Less work.</h1>
-    <p class="lede">
-      Rethink Redaction promotes clear, lawful, and accessible redaction practices — so public records remain readable
-      while protected information stays protected.
-    </p>
-
-    <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top: 1.25rem;">
-      <a class="btn" href="/about">What this is</a>
-      <a class="btn" href="/faq">Read the FAQ</a>
-      <a class="btn" href="/contact">Contact</a>
-    </div>
+<BaseLayout title="Redact the information. Rethink the ink.">
+<div class="shell">
+  <section class="opening" aria-labelledby="page-title">
+    <div class="document-line"><span>A proposal for printed public records</span><span class="status-label">For consideration</span></div>
+    <h1 id="page-title">Redact the information.<br /><span class="outlined-title">Rethink the ink.</span></h1>
+    <div class="opening-bottom"><p class="opening-intro">A black box protects nothing on its own.<br />Once the information is securely removed,<br class="desktop-break" /> could the mark we leave behind use less?</p><div class="margin-note"><span class="note-index">The intention</span><p>Keep the protection.<br />Question the material cost.</p><a class="text-link" href="#comparison">Examine the comparison <span aria-hidden="true">↓</span></a></div></div>
   </section>
-
-  <section class="section">
-    <div class="grid grid-3">
-      <div class="card" style="padding:1.25rem;">
-        <h2 class="h2">Clarity</h2>
-        <p class="small">
-          Redaction should protect sensitive data without destroying comprehension. Layout matters.
-        </p>
-      </div>
-      <div class="card" style="padding:1.25rem;">
-        <h2 class="h2">Compliance</h2>
-        <p class="small">
-          We focus on what laws typically require: protect the right fields, not the entire page.
-        </p>
-      </div>
-      <div class="card" style="padding:1.25rem;">
-        <h2 class="h2">Efficiency</h2>
-        <p class="small">
-          Better redaction workflows can reduce staff time, printing waste, and needless friction.
-        </p>
-      </div>
-    </div>
+  <Comparison />
+  <section class="argument" aria-labelledby="environment-title">
+    <div class="argument-heading"><p class="reference">The environmental case</p><h2 id="environment-title">Less on the page.<br />Less to print.</h2><span class="sample-mark" aria-hidden="true"></span></div>
+    <div class="argument-body"><p class="large-copy">For a record that gets printed, a redaction is also a mark made with ink or toner.</p><p>Rethink Redaction asks a narrow question: can outlined or lighter redaction marks reduce the material used in printing while preserving privacy, legibility, and the required record?</p><p>That is a case for testing. Smaller filled areas in a drawing are not proof of toner, cost, or emissions savings. Printer behavior, paper, settings, and the number of copies all matter.</p><a class="text-link" href="/about/">Read the proposal <span aria-hidden="true">↗</span></a></div>
   </section>
-
-  <section class="section">
-    <div class="card" style="padding: 1.5rem;">
-      <h2 class="h2">What you’ll find here</h2>
-      <ul>
-        <li>We Are At Phase 0 as of 3/3 3:33am PST </li>
-        <li>Plain-language guidance and examples (Phase 1)</li>
-        <li>Downloadable templates and checklists (Phase 1)</li>
-        <li>A public “design-first” framing of readability and trust</li>
-        <li> Updates Are Coming </li>
-      </ul>
-      <p class="small">
-        This Phase 0 site is intentionally minimal. It exists to be linkable, legible, and launch-ready.
-      </p>
-    </div>
+  <section class="conditions" aria-labelledby="conditions-title">
+    <h2 id="conditions-title">Three conditions.<br />No shortcuts.</h2>
+    <ol class="condition-list">
+      <li><span class="condition-no" aria-hidden="true">01</span><div><h3>Remove the information.</h3><p>Secure removal and checks for recoverable content come before any choice of fill, outline, or color.</p></div></li>
+      <li><span class="condition-no" aria-hidden="true">02</span><div><h3>Respect the record.</h3><p>Retain required withholding notices, locations, and context. Follow the rules that apply to that specific release.</p></div></li>
+      <li><span class="condition-no" aria-hidden="true">03</span><div><h3>Measure the difference.</h3><p>Test printed output, accessibility, and material use before claiming an improvement.</p></div></li>
+    </ol>
   </section>
+  <section class="closing-note"><p>This is a formatting proposal.<br /><strong>Its value should stand up to examination.</strong></p><a class="text-link" href="/sources/">Sources &amp; limitations <span aria-hidden="true">↗</span></a></section>
+</div>
 </BaseLayout>

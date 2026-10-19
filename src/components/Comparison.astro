@@ -1,0 +1,18 @@
+---
+import RedactionDocument from "./RedactionDocument.astro";
+---
+<section class="comparison" id="comparison" aria-labelledby="comparison-title" data-comparison data-style="outline" data-scope="passages">
+  <div class="comparison-heading"><div><p class="reference">The same record, twice</p><h2 id="comparison-title">Same omissions.<br />A different mark.</h2></div><p class="comparison-intro">The information withheld is identical.<br /> Only its visible treatment changes.</p></div>
+  <div class="comparison-controls" hidden>
+    <fieldset><legend>Proposed treatment</legend><div class="choices"><label><input type="radio" name="treatment" value="outline" checked />Outline</label><label><input type="radio" name="treatment" value="light" />Light fill</label></div></fieldset>
+    <fieldset><legend>Compare</legend><div class="choices"><label><input type="radio" name="scope" value="passages" checked />Passages</label><label><input type="radio" name="scope" value="page" />Whole page</label></div></fieldset>
+  </div>
+  <div class="specimen-pair">
+    <figure><figcaption><span class="figure-number">01</span><strong>Solid fill</strong><span>Conventional appearance</span></figcaption><RedactionDocument variant="solid" /></figure>
+    <figure><figcaption><span class="figure-number">02</span><strong data-treatment-label>Outline</strong><span>Proposed appearance</span></figcaption><RedactionDocument variant="proposed" /></figure>
+  </div>
+  <div class="comparison-note"><span class="proof-mark" aria-hidden="true">↳</span><p><strong>The mark is not the redaction.</strong> Sensitive content must first be securely removed. A box drawn over text is not sufficient. These examples contain no concealed information. <a href="/sources/#security">Read the security basis</a>.</p></div>
+  <p class="comparison-status sr-only" role="status" aria-live="polite">Comparing solid fill with outlined passages.</p>
+  <noscript><p class="small">The static comparison above shows outlined passages. Interactive view controls require JavaScript.</p></noscript>
+</section>
+<script is:inline src="/comparison.js" defer></script>

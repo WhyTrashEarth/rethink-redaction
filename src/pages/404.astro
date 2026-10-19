@@ -1,19 +1,6 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import DocumentLayout from "../layouts/DocumentLayout.astro";
 ---
-
-<BaseLayout title="Page not found" description="This page does not exist." noindex={true}>
-  <section class="section">
-    <h1 class="h1">Page not found</h1>
-    <p class="lede">
-      The page you’re looking for doesn’t exist (or moved). Use the links below to get back on track.
-    </p>
-
-    <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top: 1.25rem;">
-      <a class="btn" href="/">Home</a>
-      <a class="btn" href="/about">About</a>
-      <a class="btn" href="/faq">FAQ</a>
-      <a class="btn" href="/contact">Contact</a>
-    </div>
-  </section>
-</BaseLayout>
+<DocumentLayout title="Page not found" description="The requested page could not be found." reference="404" heading="This page is missing." deck="No redaction involved. The address may have changed or may be incomplete." noindex={true}>
+  <p slot="aside">Return to the project record.</p><section><h2>Continue reading</h2><p><a href="/">The comparison</a></p><p><a href="/about/">The proposal</a></p><p><a href="/sources/">Sources &amp; limitations</a></p></section>
+</DocumentLayout>

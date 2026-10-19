@@ -1,0 +1,11 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+interface Props { title: string; description: string; reference: string; heading: string; deck: string; noindex?: boolean }
+const { title, description, reference, heading, deck, noindex = false } = Astro.props;
+---
+<BaseLayout title={title} description={description} noindex={noindex}>
+  <article class="document shell">
+    <header class="document-heading"><div class="document-line"><span>Rethink Redaction / {reference}</span><span class="status-label">For consideration</span></div><h1>{heading}</h1><p class="document-deck">{deck}</p></header>
+    <div class="document-body"><aside class="document-aside"><slot name="aside" /></aside><div class="prose"><slot /></div></div>
+  </article>
+</BaseLayout>

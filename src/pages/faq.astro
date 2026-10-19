@@ -1,39 +1,13 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import DocumentLayout from "../layouts/DocumentLayout.astro";
 ---
-
-<BaseLayout title="FAQ" description="Quick answers about the purpose, scope, and intent of Rethink Redaction.">
-  <section class="section">
-    <h1 class="h1">FAQ</h1>
-
-    <div class="card" style="padding: 1.5rem;">
-      <h2 class="h2">Is this legal advice?</h2>
-      <p class="small">
-        No. This site is public-interest guidance about readability and workflow design. Agencies should consult their counsel
-        for jurisdiction-specific requirements.
-      </p>
-
-      <hr />
-
-      <h2 class="h2">Are you asking agencies to reveal protected information?</h2>
-      <p class="small">
-        No. The goal is to protect sensitive fields while avoiding unnecessary full-page blackout that harms comprehension.
-      </p>
-
-      <hr />
-
-      <h2 class="h2">What’s wrong with solid black boxes?</h2>
-      <p class="small">
-        They often erase headings, structure, and surrounding context. Even when compliant, they can create confusion,
-        increase follow-up requests, and reduce public trust.
-      </p>
-
-      <hr />
-
-      <h2 class="h2">What will Phase 1 include?</h2>
-      <p class="small">
-        Examples, printable checklists, and templates — designed to be simple for staff and clear for the public.
-      </p>
-    </div>
-  </section>
-</BaseLayout>
+<DocumentLayout title="Questions" description="Answers about secure redaction, the scope of IRES, legal requirements, and the evidence needed to test a lighter mark." reference="Questions" heading="The questions that matter." deck="The appearance is simple. The conditions behind it deserve care.">
+  <div slot="aside"><p>Read alongside the proposal and its sources.</p><nav aria-label="Related reading"><a href="/about/">The proposal</a><a href="/sources/">Sources &amp; limitations</a><a href="/contact/">Send a question</a></nav></div>
+  <section><h2>Does an outline hide information?</h2><p>No. Neither an outline nor a solid box makes underlying text safe. Protected content must be securely removed before the visible treatment is applied. <a href="/sources/#security">Security guidance</a> explains why covering text can leave it recoverable.</p></section>
+  <section><h2>Are black redactions prohibited or unnecessary?</h2><p>No blanket claim is made here. Solid fill can be appropriate. Applicable rules, release requirements, software behavior, and legibility determine whether an alternative is suitable.</p><p>This proposal asks whether another appearance can be tested where those requirements permit it. It is not legal advice.</p></section>
+  <section><h2>How much ink or toner would this save?</h2><p>We do not have a measured savings figure. The demonstration changes filled area on screen; it is not a printer benchmark or environmental assessment. A controlled trial is needed before making a savings claim.</p></section>
+  <section><h2>What about an entirely withheld page?</h2><p>The comparison shows a labeled placeholder as an idea for review. Any real use must preserve the page identification, explanation, and other information required for that release. An unlabeled blank page would not communicate the same thing.</p></section>
+  <section><h2>Is IRES an official standard?</h2><p>No. International Redaction Efficiency Standard is the project’s working name for a proposed approach. It should not be represented as a formally adopted or independently certified standard.</p></section>
+  <section><h2>Are the examples real public records?</h2><p>No. The dog, cat, and sandwich are fictional, following the project’s original illustrative material. There is no protected text underneath the marks, in the page source, or in a reveal control.</p></section>
+  <section><h2>Why focus on printing at all?</h2><p>The environmental question concerns copies that are actually printed. This proposal is not a reason to create more paper copies. Where an accessible digital record meets the need, changing its redaction appearance alone does not demonstrate a material saving.</p></section>
+</DocumentLayout>

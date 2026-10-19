@@ -1,29 +1,8 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import DocumentLayout from "../layouts/DocumentLayout.astro";
 ---
-
-<BaseLayout title="Contact" description="Contact Rethink Redaction.">
-  <section class="section">
-    <h1 class="h1">Contact</h1>
-    <p class="lede">
-      For press, agencies, or collaborators: use the placeholder contact details below.
-     
-      (We’ll wire a real inbox + policy language in Phase 1.)
-    </p>
-
-    <div class="card" style="padding:1.5rem; margin-top: 1.25rem;">
-      <h2 class="h2">Email</h2>
-      <p class="small">
-        <strong>rethinkredaction@amantmail.com</strong> 
-      </p>
-
-      <hr />
-
-      <h2 class="h2">Notes</h2>
-      <ul>
-        <li>We do not request protected personal data.</li>
-        <li>If you share documents, remove sensitive fields first.</li>
-      </ul>
-    </div>
-  </section>
-</BaseLayout>
+<DocumentLayout title="Contact" description="Contact Rethink Redaction with public sources, corrections, or observations about redaction workflows. Do not send protected information." reference="Correspondence" heading="Put the idea to the test." deck="Public sources, careful criticism, and reproducible observations can make this proposal stronger.">
+  <div slot="aside"><p>For agencies, researchers, document specialists, and readers.</p><nav aria-label="On this page"><a href="#correspondence">Correspondence</a><a href="#privacy">Privacy</a></nav></div>
+  <section id="correspondence"><h2>Correspondence</h2><p class="contact-address"><a href="mailto:rethinkredaction@amantmail.com">rethinkredaction@amantmail.com</a></p><p>Useful contributions include a public rule or guidance document, a correction to a cited source, or a description of a printing test and its limitations.</p><p class="document-note">Please do not send unredacted documents, personal identifiers, confidential files, or information you are not authorized to disclose. Public links are preferable.</p><p>Email is ordinary project correspondence, not a secure document-submission channel.</p></section>
+  <section id="privacy"><h2>A small site, a limited footprint.</h2><p>This site has no document upload, account registration, advertising scripts, or analytics added by the project. The comparison runs in your browser using fictional examples; it does not accept or transmit documents.</p><p>Fonts and design assets are served with the site. The hosting provider may process ordinary connection information and access logs. Following an external source link takes you to that provider’s website; using the email link opens your email application.</p><p>Information you choose to send by email is outside the on-page demonstration. Keep correspondence limited to what the project needs to consider your message.</p></section>
+</DocumentLayout>

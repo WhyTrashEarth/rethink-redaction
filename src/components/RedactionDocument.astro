@@ -1,0 +1,17 @@
+---
+interface Props { variant: "solid" | "proposed" }
+const { variant } = Astro.props;
+---
+<div class:list={["specimen", "specimen--" + variant]}>
+  <div class="specimen-head"><span>Illustrative record</span><span>RR / 01</span></div>
+  <div class="passages">
+    <h3>In the matter of<br />a missing sandwich</h3>
+    <p>On the morning of <span class="redaction w-4"><span class="sr-only">[withheld]</span></span>, a sandwich was reported missing from the shared kitchen.</p>
+    <p>The dog stated that <span class="redaction w-7"><span class="sr-only">[withheld]</span></span> and that he had been “a very good boy” at the time of the incident.</p>
+    <p>The cat, <span class="redaction w-5"><span class="sr-only">[withheld]</span></span>, declined to comment but maintained prolonged eye contact with the sandwich location.</p>
+    <p>An internal review determined that <span class="redaction w-8"><span class="sr-only">[withheld]</span></span> had last been seen near <span class="redaction w-4"><span class="sr-only">[withheld]</span></span>.</p>
+    <p class="specimen-conclusion">Both parties were reminded that future sandwiches are to be monitored accordingly.</p>
+  </div>
+  <div class="whole-page" hidden><div class="page-withheld"><span>This page is withheld in full.</span></div></div>
+  <div class="specimen-foot"><span>Fictional demonstration</span><span>1</span></div>
+</div>
